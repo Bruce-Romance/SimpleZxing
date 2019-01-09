@@ -229,25 +229,6 @@ public final class CameraManager {
       Log.d(TAG, "Calculated framing rect: " + framingRect);
     }
     return framingRect;
-//    if (framingRect == null) {
-//      if (camera == null) {
-//        return null;
-//      }
-//      Point screenResolution = configManager.getScreenResolution();
-//      if (screenResolution == null) {
-//        // Called early, before init even finished
-//        return null;
-//      }
-//
-//      int width = findDesiredDimensionInRange(screenResolution.x, MIN_FRAME_WIDTH, MAX_FRAME_WIDTH);
-//      int height = findDesiredDimensionInRange(screenResolution.y, MIN_FRAME_HEIGHT, MAX_FRAME_HEIGHT);
-//
-//      int leftOffset = (screenResolution.x - width) / 2;
-//      int topOffset = (screenResolution.y - height) / 2;
-//      framingRect = new Rect(leftOffset, topOffset, leftOffset + width, topOffset + height);
-//      Log.d(TAG, "Calculated framing rect: " + framingRect);
-//    }
-//    return framingRect;
   }
   
   private static int findDesiredDimensionInRange(int resolution, int hardMin, int hardMax) {
@@ -297,26 +278,6 @@ public final class CameraManager {
 
     }
     return framingRectInPreview;
-//    if (framingRectInPreview == null) {
-//      Rect framingRect = getFramingRect();
-//      if (framingRect == null) {
-//        return null;
-//      }
-//      Rect rect = new Rect(framingRect);
-//      Point cameraResolution = configManager.getCameraResolution();
-//      Point screenResolution = configManager.getScreenResolution();
-//      if (cameraResolution == null || screenResolution == null) {
-//        // Called early, before init even finished
-//        return null;
-//      }
-//      rect.left = rect.left * cameraResolution.x / screenResolution.x;
-//      rect.right = rect.right * cameraResolution.x / screenResolution.x;
-//      rect.top = rect.top * cameraResolution.y / screenResolution.y;
-//      rect.bottom = rect.bottom * cameraResolution.y / screenResolution.y;
-//
-//      framingRectInPreview = rect;
-//    }
-//    return framingRectInPreview;
   }
 
   
